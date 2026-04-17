@@ -75,3 +75,7 @@ npm run dev
 - Online payment integration
 - Email/SMS notifications
 - Admin analytics dashboard
+
+## 👨‍💻 Author
+
+Team pro_coders
