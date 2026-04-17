@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apartment Maintenance & Billing Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="brand">
+        <span class="brand-name">Greenview</span>
+        <span class="brand-sub">Resident Portal</span>
+      </div>
+    </div>
+
+    <div class="unit-tag">Unit 4B — Block A</div>
+
+    <nav class="nav">
+        <a href="#" class="nav-item active" data-page="home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home
+  </a>
+      <a href="#" class="nav-item active" data-page="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="nav-item" data-page="billing">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Billing
+      </a>
+      <a href="#" class="nav-item" data-page="payments">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Payments
+      </a>
+      <a href="#" class="nav-item" data-page="maintenance">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        Maintenance
+      </a>
+      <a href="#" class="nav-item" data-page="notices">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        Notices
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="resident-info">
+        <div class="avatar">RK</div>
+        <div class="resident-details">
+          <span class="resident-name">Rahul Kumar</span>
+          <span class="resident-role">Resident</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" id="main">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <h1 class="page-title" id="pageTitle">Dashboard</h1>
+      <div class="topbar-right">
+        <div class="notif-btn" id="notifBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          <span class="notif-badge">3</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- PAGES -->
+     </header>
+
+<!-- PAGES -->
+
+<!-- NEW HOME PAGE -->
+<section class="page active" id="page-home">
+  <div class="home-hero">
+    <div class="hero-logo-container">
+      <div class="logo large-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <h1 class="hero-brand">Greenview</h1>
+      <p class="hero-tagline">Premium Living, Simplified Management</p>
+    </div>
+    
+    <div class="welcome-card">
+      <h2>Welcome back, Rahul Kumar</h2>
+      <p>Unit 4B — Block A</p>
+      <div class="quick-actions-grid">
+        <div class="action-card" onclick="goToPage('billing')">
+          <span class="action-icon">💳</span>
+          <span>Pay Rent</span>
+        </div>
+        <div class="action-card" onclick="goToPage('maintenance')">
+          <span class="action-icon">🛠</span>
+          <span>Request Service</span>
+        </div>
+        <div class="action-card" onclick="goToPage('notices')">
+          <span class="action-icon">📢</span>
+          <span>Announcements</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-status-summary">
+    <h3>Quick Status</h3>
+    <div class="status-flex">
+      <div class="status-item">
+        <span class="status-label">Billing</span>
+        <span class="status-val danger-text">₹12,450 Overdue</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">Maintenance</span>
+        <span class="status-val success-text">1 Scheduled</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">Water Supply</span>
+        <span class="status-val">Normal</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD PAGE (Now Hidden by default) -->
+
+
+    <!-- DASHBOARD PAGE -->
+    <section class="page active" id="page-dashboard">
+      <div class="alert-bar">
+        <span class="alert-icon">⚠</span>
+        Water maintenance scheduled Apr 9, 8–11 AM — brief service interruption expected.
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card danger">
+          <span class="metric-label">Balance due</span>
+          <span class="metric-value">₹12,450</span>
+          <span class="metric-hint">2 bills overdue</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">Last payment</span>
+          <span class="metric-value">Mar 1</span>
+          <span class="metric-hint">₹11,000 paid</span>
+        </div>
+        <div class="metric-card warning">
+          <span class="metric-label">Open requests</span>
+          <span class="metric-value">2</span>
+          <span class="metric-hint">1 scheduled</span>
+        </div>
+        <div class="metric-card success">
+          <span class="metric-label">Lease ends</span>
+          <span class="metric-value">Dec 31</span>
+          <span class="metric-hint">270 days left</span>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent bills</h3>
+            <a href="#" class="link-btn" data-goto="billing">View all</a>
+          </div>
+          <div class="bill-list">
+            <div class="bill-row">
+              <div class="bill-info">
+                <span class="bill-name">Rent — April</span>
+                <span class="bill-due">Due Apr 1</span>
+              </div>
+              <div class="bill-right">
+                <span class="amount">₹11,000</span>
+                <span class="pill overdue">Overdue</span>
+              </div>
+            </div>
+            <div class="bill-row">
+              <div class="bill-info">
+                <span class="bill-name">Electricity</span>
+                <span class="bill-due">Due Apr 15</span>
+              </div>
+              <div class="bill-right">
+                <span class="amount">₹1,450</span>
+                <span class="pill due">Due</span>
+              </div>
+            </div>
+            <div class="bill-row">
+              <div class="bill-info">
+                <span class="bill-name">Water & sewage</span>
+                <span class="bill-due">Due Apr 20</span>
+              </div>
+              <div class="bill-right">
+                <span class="amount">₹420</span>
+                <span class="pill pending">Pending</span>
+              </div>
+            </div>
+            <div class="bill-row">
+              <div class="bill-info">
+                <span class="bill-name">Internet</span>
+                <span class="bill-due">Paid Mar 28</span>
+              </div>
+              <div class="bill-right">
+                <span class="amount muted">₹580</span>
+                <span class="pill paid">Paid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Maintenance requests</h3>
+            <a href="#" class="link-btn" data-goto="maintenance">View all</a>
+          </div>
+          <div class="req-list">
+            <div class="req-row">
+              <div class="req-icon plumb">🔧</div>
+              <div class="req-info">
+                <span class="req-title">Leaking kitchen faucet</span>
+                <span class="req-meta">Mar 29 · Plumbing</span>
+              </div>
+              <span class="pill scheduled">Scheduled</span>
+            </div>
+            <div class="req-row">
+              <div class="req-icon elec">⚡</div>
+              <div class="req-info">
+                <span class="req-title">Bedroom outlet not working</span>
+                <span class="req-meta">Apr 2 · Electrical</span>
+              </div>
+              <span class="pill open">Open</span>
+            </div>
+            <div class="req-row">
+              <div class="req-icon hvac">❄️</div>
+              <div class="req-info">
+                <span class="req-title">AC filter replacement</span>
+                <span class="req-meta">Mar 15 · HVAC</span>
+              </div>
+              <span class="pill paid">Done</span>
+            </div>
+          </div>
+          <button class="btn-primary mt-12" onclick="goToPage('maintenance')">+ New request</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BILLING PAGE -->
+    <section class="page" id="page-billing">
+      <div class="page-intro">
+        <h2>Your bills</h2>
+        <p>All invoices generated for Unit 4B.</p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3>Invoice history</h3>
+          <div class="filter-group">
+            <select id="billFilter">
+              <option value="all">All statuses</option>
+              <option value="overdue">Overdue</option>
+              <option value="due">Due</option>
+              <option value="paid">Paid</option>
+            </select>
+          </div>
+        </div>
+        <table class="data-table" id="billTable">
+          <thead>
+            <tr>
+              <th>Invoice</th>
+              <th>Category</th>
+              <th>Due date</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="overdue">
+              <td><span class="mono">#INV-0412</span></td>
+              <td>Rent</td>
+              <td>Apr 1, 2025</td>
+              <td>₹11,000</td>
+              <td><span class="pill overdue">Overdue</span></td>
+              <td><button class="btn-sm" onclick="openPayModal('Rent — April', 11000)">Pay now</button></td>
+            </tr>
+            <tr data-status="due">
+              <td><span class="mono">#INV-0413</span></td>
+              <td>Electricity</td>
+              <td>Apr 15, 2025</td>
+              <td>₹1,450</td>
+              <td><span class="pill due">Due</span></td>
+              <td><button class="btn-sm" onclick="openPayModal('Electricity', 1450)">Pay now</button></td>
+            </tr>
+            <tr data-status="due">
+              <td><span class="mono">#INV-0414</span></td>
+              <td>Water & Sewage</td>
+              <td>Apr 20, 2025</td>
+              <td>₹420</td>
+              <td><span class="pill pending">Pending</span></td>
+              <td><button class="btn-sm" onclick="openPayModal('Water & Sewage', 420)">Pay now</button></td>
+            </tr>
+            <tr data-status="paid">
+              <td><span class="mono">#INV-0401</span></td>
+              <td>Internet</td>
+              <td>Mar 28, 2025</td>
+              <td>₹580</td>
+              <td><span class="pill paid">Paid</span></td>
+              <td><button class="btn-sm ghost">Receipt</button></td>
+            </tr>
+            <tr data-status="paid">
+              <td><span class="mono">#INV-0385</span></td>
+              <td>Rent</td>
+              <td>Mar 1, 2025</td>
+              <td>₹11,000</td>
+              <td><span class="pill paid">Paid</span></td>
+              <td><button class="btn-sm ghost">Receipt</button></td>
+            </tr>
+            <tr data-status="paid">
+              <td><span class="mono">#INV-0386</span></td>
+              <td>Electricity</td>
+              <td>Mar 15, 2025</td>
+              <td>₹1,200</td>
+              <td><span class="pill paid">Paid</span></td>
+              <td><button class="btn-sm ghost">Receipt</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PAYMENTS PAGE -->
+    <section class="page" id="page-payments">
+      <div class="page-intro">
+        <h2>Make a payment</h2>
+        <p>Pay your dues securely online.</p>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header"><h3>Payment form</h3></div>
+          <form class="pay-form" id="payForm" onsubmit="submitPayment(event)">
+            <div class="form-group">
+              <label>Pay towards</label>
+              <select id="payTowards">
+                <option>Rent — April (₹11,000)</option>
+                <option>Electricity (₹1,450)</option>
+                <option>Water & Sewage (₹420)</option>
+                <option>All outstanding (₹12,870)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Amount (₹)</label>
+              <input type="number" id="payAmount" value="11000" min="1"/>
+            </div>
+            <div class="form-group">
+              <label>Cardholder name</label>
+              <input type="text" id="cardName" placeholder="Rahul Kumar"/>
+            </div>
+            <div class="form-group">
+              <label>Card number</label>
+              <input type="text" id="cardNumber" placeholder="•••• •••• •••• 4242" maxlength="19"/>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Expiry</label>
+                <input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7"/>
+              </div>
+              <div class="form-group">
+                <label>CVV</label>
+                <input type="text" id="cardCvv" placeholder="•••" maxlength="3"/>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary full-width">Pay now</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="card mb-16">
+            <div class="card-header"><h3>Outstanding summary</h3></div>
+            <div class="summary-list">
+              <div class="summary-row">
+                <span>Rent (overdue)</span>
+                <span class="danger-text">₹11,000</span>
+              </div>
+              <div class="summary-row">
+                <span>Electricity</span>
+                <span>₹1,450</span>
+              </div>
+              <div class="summary-row">
+                <span>Water & Sewage</span>
+                <span>₹420</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total due</span>
+                <span>₹12,870</span>
+              </div>
+            </div>
+          </div>
+          <div class="card info-card">
+            <div class="card-header"><h3>Payment history</h3></div>
+            <div class="history-list">
+              <div class="history-row">
+                <div>
+                  <span class="history-title">Rent — March</span>
+                  <span class="history-date">Mar 1, 2025</span>
+                </div>
+                <span class="success-text">₹11,000</span>
+              </div>
+              <div class="history-row">
+                <div>
+                  <span class="history-title">Internet — March</span>
+                  <span class="history-date">Mar 28, 2025</span>
+                </div>
+                <span class="success-text">₹580</span>
+              </div>
+              <div class="history-row">
+                <div>
+                  <span class="history-title">Electricity — March</span>
+                  <span class="history-date">Mar 15, 2025</span>
+                </div>
+                <span class="success-text">₹1,200</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAINTENANCE PAGE -->
+    <section class="page" id="page-maintenance">
+      <div class="page-intro">
+        <h2>Maintenance requests</h2>
+        <p>Submit and track service requests for your unit.</p>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header"><h3>Submit new request</h3></div>
+          <form class="req-form" id="reqForm" onsubmit="submitRequest(event)">
+            <div class="form-group">
+              <label>Category</label>
+              <select id="reqCategory">
+                <option value="">Select category</option>
+                <option>Plumbing</option>
+                <option>Electrical</option>
+                <option>HVAC / Heating</option>
+                <option>Appliance</option>
+                <option>Pest control</option>
+                <option>Structural</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Priority</label>
+              <select id="reqPriority">
+                <option>Low</option>
+                <option selected>Medium</option>
+                <option>High — urgent</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <input type="text" id="reqTitle" placeholder="e.g. Bathroom light flickering"/>
+            </div>
+            <div class="form-group">
+              <label>Additional details</label>
+              <textarea id="reqDetails" rows="3" placeholder="Describe the issue or preferred visit times…"></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width">Submit request</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Your requests</h3>
+            <select id="reqFilter">
+              <option value="all">All statuses</option>
+              <option value="open">Open</option>
+              <option value="scheduled">Scheduled</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+          <div class="req-list tall" id="reqListFull">
+            <div class="req-row-full" data-status="scheduled">
+              <div class="req-top">
+                <div class="req-icon plumb">🔧</div>
+                <div class="req-info">
+                  <span class="req-title">Leaking kitchen faucet</span>
+                  <span class="req-meta">#REQ-0041 · Mar 29 · Plumbing</span>
+                </div>
+                <span class="pill scheduled">Scheduled</span>
+              </div>
+              <p class="req-desc">Water dripping constantly from the base of the kitchen tap. Getting worse over time.</p>
+              <div class="req-footer">
+                <span>🗓 Scheduled: Apr 10, 10–12 AM</span>
+                <span>Assigned to: Suresh M.</span>
+              </div>
+            </div>
+            <div class="req-row-full" data-status="open">
+              <div class="req-top">
+                <div class="req-icon elec">⚡</div>
+                <div class="req-info">
+                  <span class="req-title">Bedroom outlet not working</span>
+                  <span class="req-meta">#REQ-0042 · Apr 2 · Electrical</span>
+                </div>
+                <span class="pill open">Open</span>
+              </div>
+              <p class="req-desc">The wall outlet near the study desk stopped working. No power at all.</p>
+              <div class="req-footer">
+                <span>⏳ Awaiting assignment</span>
+              </div>
+            </div>
+            <div class="req-row-full" data-status="done">
+              <div class="req-top">
+                <div class="req-icon hvac">❄️</div>
+                <div class="req-info">
+                  <span class="req-title">AC filter replacement</span>
+                  <span class="req-meta">#REQ-0038 · Mar 15 · HVAC</span>
+                </div>
+                <span class="pill paid">Done</span>
+              </div>
+              <p class="req-desc">Annual filter cleaning and replacement completed.</p>
+              <div class="req-footer success-footer">
+                <span>✓ Completed Mar 17</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTICES PAGE -->
+    <section class="page" id="page-notices">
+      <div class="page-intro">
+        <h2>Society notices</h2>
+        <p>Announcements from Greenview Apartments management.</p>
+      </div>
+      <div class="notices-list">
+        <div class="notice-card urgent">
+          <div class="notice-header">
+            <span class="notice-tag urgent-tag">Urgent</span>
+            <span class="notice-date">Apr 5, 2025</span>
+          </div>
+          <h3>Water supply maintenance — Apr 9</h3>
+          <p>Scheduled maintenance on the main water supply line. Water will be unavailable from 8 AM to 11 AM. Please store water in advance.</p>
+          <div class="notice-meta">Posted by: Society Management</div>
+        </div>
+        <div class="notice-card">
+          <div class="notice-header">
+            <span class="notice-tag general-tag">General</span>
+            <span class="notice-date">Apr 2, 2025</span>
+          </div>
+          <h3>Annual general meeting — Apr 20</h3>
+          <p>The Annual General Meeting of Greenview Residents' Association will be held on April 20 at 6:30 PM in the community hall. All residents are encouraged to attend.</p>
+          <div class="notice-meta">Posted by: RWA Committee</div>
+        </div>
+        <div class="notice-card">
+          <div class="notice-header">
+            <span class="notice-tag info-tag">Info</span>
+            <span class="notice-date">Mar 28, 2025</span>
+          </div>
+          <h3>Visitor parking policy update</h3>
+          <p>Visitors are now allowed to park in Zone C for up to 4 hours. Please ensure your visitors register at the gate. Overnight parking requires prior approval.</p>
+          <div class="notice-meta">Posted by: Society Management</div>
+        </div>
+        <div class="notice-card">
+          <div class="notice-header">
+            <span class="notice-tag general-tag">General</span>
+            <span class="notice-date">Mar 20, 2025</span>
+          </div>
+          <h3>Pest control scheduled — common areas</h3>
+          <p>Professional pest control treatment for all common areas, basement, and parking will be carried out on March 25 from 9 AM to 1 PM.</p>
+          <div class="notice-meta">Posted by: Facility Team</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PAYMENT MODAL -->
+  <div class="modal-overlay" id="payModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Make payment</h3>
+        <button class="modal-close" onclick="closePayModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Amount (₹)</label>
+          <input type="number" id="modalAmount" value="11000"/>
+        </div>
+        <div class="form-group">
+          <label>Card number</label>
+          <input type="text" placeholder="•••• •••• •••• 4242" maxlength="19"/>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Expiry</label>
+            <input type="text" placeholder="MM / YY" maxlength="7"/>
+          </div>
+          <div class="form-group">
+            <label>CVV</label>
+            <input type="text" placeholder="•••" maxlength="3"/>
+          </div>
+        </div>
+        <button class="btn-primary full-width" onclick="confirmPayment()">Confirm payment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
